@@ -1,0 +1,52 @@
+{
+  "name": "cross-port-killer",
+  "version": "0.0.1",
+  "description": "Kill the process running on a given port on Windows, Linux and Mac",
+  "keywords": [
+    "port",
+    "process",
+    "kill",
+    "kill-port",
+    "cross-platform",
+    "windows",
+    "linux",
+    "mac"
+  ],
+  "main": "source/index.js",
+  "bin": {
+    "kill-port": "source/cli.js"
+  },
+  "scripts": {
+    "prepublish": "npm run build && npm test",
+    "build": "tsc",
+    "pretest": "npm run build",
+    "test": "mocha --no-timeouts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/milewski/cross-port-killer.git"
+  },
+  "files": [
+    "source/*.js",
+    "test"
+  ],
+  "author": {
+    "name": "Rafael Milewski",
+    "email": "rafael.milewski@gmail.com",
+    "url": "https://github.com/milewski"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/milewski/cross-port-killer/issues"
+  },
+  "homepage": "https://github.com/milewski/cross-port-killer",
+  "devDependencies": {
+    "@types/mocha": "^2.2.41",
+    "@types/node": "^7.0.14",
+    "expect.js": "^0.3.1",
+    "mocha": "^3.3.0",
+    "typescript": "^2.3.1"
+  },
+  "dependencies": {
+  }
+}

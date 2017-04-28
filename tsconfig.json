@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "sourceMap": true,
+    "types": [
+      "node",
+      "mocha"
+    ],
+    "lib": [
+      "es2015"
+    ]
+  },
+  "compileOnSave": true,
+  "exclude": [
+    "node_modules"
+  ]
+}
