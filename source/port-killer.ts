@@ -6,10 +6,9 @@ export class Killer {
 
     private platform: string;
     private platforms = {
-        win32: {
-            command: 'Taskkill',
-            args: ['/F', '/PID']
-        }
+        win32: { command: 'Taskkill', args: ['/F', '/PID'] },
+        linux: { command: 'kill', args: ['-9'] },
+        darwin: { command: 'kill', args: ['-9'] },
     }
 
     constructor(platform: string) {
@@ -33,6 +32,38 @@ export class Killer {
         })
 
         return Promise.resolve()
+
+    }
+
+    private darwin(port: number): Promise<string[]|null> {
+        return this.linux(port)
+    }
+
+    private linux(port: number): Promise<string[]|null> {
+
+        let resolver;
+        let promise = new Promise(resolve => {
+            resolver = resolve
+        })
+
+        const lsof = spawn('lsof', ['-sTCP:LISTEN', `-i:${port}`])
+
+        let result = '';
+
+        lsof.stdout.on('data', data => result += data);
+        lsof.on('close', () => {
+
+            let pids = /^\S+\s+(\d+)/igm.exec(result.trim())
+
+            if (pids && pids.length) {
+                this.killByPids(pids)
+            }
+
+            resolver(pids)
+
+        });
+
+        return promise
 
     }
 
