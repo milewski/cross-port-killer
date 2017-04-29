@@ -37,6 +37,16 @@ $ npm install cross-port-killer -g
 $ kill-port 9090
 ```
 
+## Dependencies
+
+On **Linux**/**Mac** this library depends on `lsof` in case you don't have it installed (perhaps you are using docker?) run:
+
+```bash
+$ apt-get install lsof
+```
+
+On **Mac**, It comes with the OS by default so nothing to worries.
+
 ## License 
 
 [MIT](LICENSE) © [Rafael Milewski](https://rafael-milewski.com?github=readme)
