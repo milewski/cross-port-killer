@@ -1,7 +1,7 @@
 {
   "name": "cross-port-killer",
-  "version": "0.0.1",
-  "description": "Kill the process running on a given port on Windows, Linux and Mac",
+  "version": "1.0.0",
+  "description": "Kill the process running on a given TCP port on Windows, Linux and Mac",
   "keywords": [
     "port",
     "process",
@@ -44,9 +44,10 @@
     "@types/mocha": "^2.2.41",
     "@types/node": "^7.0.14",
     "expect.js": "^0.3.1",
+    "http-server": "^0.9.0",
     "mocha": "^3.3.0",
+    "ps-list": "^3.1.0",
     "typescript": "^2.3.1"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }

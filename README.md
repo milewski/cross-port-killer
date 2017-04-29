@@ -6,7 +6,7 @@
 [![dependencies](https://david-dm.org/milewski/cross-port-killer].svg)](https://www.npmjs.com/package/cross-port-killer)
 [![greenkeeper](https://badges.greenkeeper.io/milewski/cross-port-killer].svg)](https://greenkeeper.io)
 
-Kill the process running on a given TCP/UDP port on **Windows**, **Linux** and **Mac**
+Kill the process running on a given TCP port on **Windows**, **Linux** and **Mac**
 
 ## Install
 
