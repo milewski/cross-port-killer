@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 import { spawn, spawnSync } from "child_process";
 
 export class Killer {
