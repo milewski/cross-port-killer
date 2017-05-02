@@ -1,10 +1,10 @@
 # cross-port-killer
 
-[![Build Status](https://travis-ci.org/milewski/cross-port-killer].svg?branch=master)](https://travis-ci.org/milewski/cross-port-killer)
-[![npm version](https://badge.fury.io/js/cross-port-killer].svg)](https://badge.fury.io/js/cross-port-killer)
-[![npm downloads](https://img.shields.io/npm/dm/cross-port-killer].svg)](https://www.npmjs.com/package/cross-port-killer)
-[![dependencies](https://david-dm.org/milewski/cross-port-killer].svg)](https://www.npmjs.com/package/cross-port-killer)
-[![greenkeeper](https://badges.greenkeeper.io/milewski/cross-port-killer].svg)](https://greenkeeper.io)
+[![Build Status](https://travis-ci.org/milewski/cross-port-killer.svg?branch=master)](https://travis-ci.org/milewski/cross-port-killer)
+[![npm version](https://badge.fury.io/js/cross-port-killer.svg)](https://badge.fury.io/js/cross-port-killer)
+[![npm downloads](https://img.shields.io/npm/dm/cross-port-killer.svg)](https://www.npmjs.com/package/cross-port-killer)
+[![dependencies](https://david-dm.org/milewski/cross-port-killer.svg)](https://www.npmjs.com/package/cross-port-killer)
+[![greenkeeper](https://badges.greenkeeper.io/milewski/cross-port-killer.svg)](https://greenkeeper.io)
 
 Kill the process running on a given TCP port on **Windows**, **Linux** and **Mac**
 

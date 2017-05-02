@@ -1,6 +1,6 @@
 {
   "name": "cross-port-killer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Kill the process running on a given TCP port on Windows, Linux and Mac",
   "keywords": [
     "port",
