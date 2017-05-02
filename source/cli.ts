@@ -1,3 +1,5 @@
+#! /usr/bin/env node
+
 import { Killer } from "./port-killer";
 
 import { kill } from "./index";
