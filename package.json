@@ -42,7 +42,7 @@
   "homepage": "https://github.com/milewski/cross-port-killer",
   "devDependencies": {
     "@types/mocha": "^2.2.41",
-    "@types/node": "^7.0.14",
+    "@types/node": "^8.0.0",
     "expect.js": "^0.3.1",
     "http-server": "^0.10.0",
     "mocha": "^3.3.0",
