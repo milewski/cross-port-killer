@@ -4,26 +4,26 @@ export class Killer {
 
     private platform: string;
     private platforms = {
-        win32: { command: 'Taskkill', args: ['/F', '/PID'] },
-        linux: { command: 'kill', args: ['-9'] },
-        darwin: { command: 'kill', args: ['-9'] },
+        win32: { command: 'Taskkill', args: [ '/F', '/PID' ] },
+        linux: { command: 'kill', args: [ '-9' ] },
+        darwin: { command: 'kill', args: [ '-9' ] },
     }
 
     constructor(platform: string) {
         this.platform = platform
     }
 
-    public kill(port: number|string): Promise<string[]|null> {
-        return this[this.platform](port)
+    public kill(port: number | string): Promise<string[] | null> {
+        return this[ this.platform ](port)
     }
 
     public killByPid(pid: string): Promise<string[]> {
-        return this.killByPids([pid])
+        return this.killByPids([ pid ])
     }
 
     public killByPids(pids: string[]): Promise<string[]> {
 
-        const { command, args } = this.platforms[process.platform]
+        const { command, args } = this.platforms[ process.platform ]
 
         let result = pids.filter(pid => {
             return spawnSync(command, args.concat(pid)).status === 0
@@ -33,19 +33,17 @@ export class Killer {
 
     }
 
-    private darwin(port: number): Promise<string[]|null> {
+    private darwin(port: number): Promise<string[] | {}> {
         return this.linux(port)
     }
 
-    private linux(port: number): Promise<string[]|null> {
+    private linux(port: number): Promise<string[] | {}> {
 
-        let resolver;
-        let promise = new Promise(resolve => {
-            resolver = resolve
-        })
+        let resolver,
+            promise = new Promise(resolve => { resolver = resolve })
 
-        const lsof = spawn('lsof', ['-s', 'TCP:LISTEN', '-i', ':' + port])
-        const awk = spawn('awk', ['\$8 == "TCP" { print $2 }'], { stdio: [lsof.stdout] })
+        const lsof = spawn('lsof', [ '-s', 'TCP:LISTEN', '-i', ':' + port ])
+        const awk = spawn('awk', [ '\$8 == "TCP" { print $2 }' ], { stdio: [ lsof.stdout ] })
 
         let result = '';
 
@@ -53,19 +51,17 @@ export class Killer {
         awk.on('close', () => this.parse(result, resolver));
         awk.stdin.end();
 
-        return promise
+        return promise as any
 
     }
 
-    private win32(port: number): Promise<string[]|null> {
+    private win32(port: number): Promise<string | {}> {
 
-        let resolver;
-        let promise = new Promise(resolve => {
-            resolver = resolve
-        })
+        let resolver,
+            promise = new Promise(resolve => { resolver = resolve })
 
-        const findstr = spawn('findstr', [`:${port}.*LISTENING`], { stdio: ['pipe'] })
-        const netstat = spawn('netstat', ['-ano'], { stdio: ['ignore', findstr.stdin] })
+        const findstr = spawn('findstr', [ `:${port}.*LISTENING` ], { stdio: [ 'pipe' ] })
+        const netstat = spawn('netstat', [ '-ano' ], { stdio: [ 'ignore', findstr.stdin ] })
 
         let result = '';
 
@@ -77,7 +73,7 @@ export class Killer {
 
     }
 
-    private parse(data, resolver) {
+    private parse(data: string, resolver: (pids: string[]) => void) {
 
         const pids = data.trim().match(/\d+$/mg)
 

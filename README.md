@@ -4,6 +4,7 @@
 [![npm version](https://badge.fury.io/js/cross-port-killer.svg)](https://badge.fury.io/js/cross-port-killer)
 [![npm downloads](https://img.shields.io/npm/dm/cross-port-killer.svg)](https://www.npmjs.com/package/cross-port-killer)
 [![dependencies](https://david-dm.org/milewski/cross-port-killer.svg)](https://www.npmjs.com/package/cross-port-killer)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![greenkeeper](https://badges.greenkeeper.io/milewski/cross-port-killer.svg)](https://greenkeeper.io)
 
 Kill the process running on a given TCP port on **Windows**, **Linux** and **Mac**
