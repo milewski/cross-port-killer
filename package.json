@@ -50,7 +50,7 @@
     "expect.js": "^0.3.1",
     "http-server": "^0.10.0",
     "husky": "^0.14.3",
-    "mocha": "^3.4.2",
+    "mocha": "^4.0.0",
     "ps-list": "^3.1.0",
     "semantic-release": "^7.0.1",
     "typescript": "^2.4.2"
