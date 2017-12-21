@@ -52,7 +52,7 @@
     "husky": "^0.14.3",
     "ps-list": "^4.0.0",
     "mocha": "^4.0.0",
-    "semantic-release": "^7.0.1",
+    "semantic-release": "^11.0.2",
     "typescript": "^2.4.2"
   },
   "dependencies": {},
