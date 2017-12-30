@@ -25,7 +25,7 @@
     "pretest": "npm run build",
     "test": "mocha --no-timeouts",
     "prettier": "prettier \"*/**/*.ts\" --config .prettierrc --write",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "semantic-release": "semantic-release"
   },
   "repository": {
     "type": "git",
@@ -58,7 +58,6 @@
     "semantic-release": "^11.0.2",
     "typescript": "^2.6.2"
   },
-  "dependencies": {},
   "config": {
     "commitizen": {
       "path": "cz-conventional-changelog"
