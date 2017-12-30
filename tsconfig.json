@@ -3,6 +3,7 @@
     "module": "commonjs",
     "target": "es5",
     "sourceMap": false,
+    "newLine": "LF",
     "types": [
       "node",
       "mocha"
