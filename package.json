@@ -19,6 +19,7 @@
   "scripts": {
     "prepare": "npm run build && npm test",
     "build": "tsc",
+    "precommit": "npm run prettier",
     "commit": "git-cz",
     "prepush": "npm test",
     "pretest": "npm run build",
