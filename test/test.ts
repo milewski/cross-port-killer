@@ -5,7 +5,7 @@ import { Killer } from '../source/port-killer'
 
 describe('Assassin', () => {
     it('should terminate process running on a given port', done => {
-        const server = spawn('node', [ require.resolve('http-server/bin/http-server'), '-p', '7070' ], {
+        const server = spawn('node', [require.resolve('http-server/bin/http-server'), '-p', '7070'], {
             stdio: 'ignore',
             detached: true
         })
@@ -22,10 +22,9 @@ describe('Assassin', () => {
                     for (let { pid } of data) expect(pid).not.to.be(server.pid)
                 })
                 .then(done)
-                .catch(() => limit > 0 ? loop(--limit) : null)
+                .catch(() => (limit > 0 ? loop(--limit) : null))
         }
 
         setTimeout(loop, 500)
-
     })
 })
