@@ -24,12 +24,15 @@
     "prepush": "npm test",
     "pretest": "npm run build",
     "test": "mocha --no-timeouts",
-    "prettier": "prettier \"*/**/*.ts\" --config .prettierrc --write",
+    "prettier": "prettier \"*/**/*.ts\" --config .prettierrc --write && git add .",
     "semantic-release": "semantic-release"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/milewski/cross-port-killer.git"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   },
   "files": [
     "source/*.js",
