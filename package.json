@@ -49,17 +49,17 @@
   },
   "homepage": "https://github.com/milewski/cross-port-killer",
   "devDependencies": {
-    "@types/mocha": "^2.2.45",
-    "@types/node": "^8.5.2",
+    "@types/mocha": "^2.2.48",
+    "@types/node": "^8.9.4",
     "cz-conventional-changelog": "^2.1.0",
     "expect.js": "^0.3.1",
     "http-server": "^0.10.0",
     "husky": "^0.14.3",
     "mocha": "^4.1.0",
-    "prettier": "^1.9.2",
+    "prettier": "^1.10.2",
     "ps-list": "^4.0.0",
-    "semantic-release": "^11.0.2",
-    "typescript": "^2.6.2"
+    "semantic-release": "^11.2.0",
+    "typescript": "^2.7.2"
   },
   "config": {
     "commitizen": {
