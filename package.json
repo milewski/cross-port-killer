@@ -58,7 +58,7 @@
     "mocha": "^4.1.0",
     "prettier": "^1.10.2",
     "ps-list": "^4.0.0",
-    "semantic-release": "^11.2.0",
+    "semantic-release": "^12.2.2",
     "typescript": "^2.7.2"
   },
   "config": {
