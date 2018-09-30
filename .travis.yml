@@ -13,8 +13,9 @@ notifications:
 
 node_js:
   - 'node'
+  - '10'
+  - '9'
   - '8'
-  - '7'
   - '6'
 
 before_script:
