@@ -50,7 +50,7 @@
   "homepage": "https://github.com/milewski/cross-port-killer",
   "devDependencies": {
     "@types/mocha": "^5.2.5",
-    "@types/node": "^10.11.3",
+    "@types/node": "^11.9.0",
     "commitizen": "^2.10.1",
     "cz-conventional-changelog": "^2.1.0",
     "expect.js": "^0.3.1",
