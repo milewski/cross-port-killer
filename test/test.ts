@@ -1,6 +1,6 @@
 import { spawn } from 'child_process'
 import * as expect from 'expect.js'
-import * as psList from 'ps-list'
+import psList from 'ps-list'
 import { Killer } from '../source/port-killer'
 
 describe('Assassin', () => {

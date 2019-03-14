@@ -1,7 +1,7 @@
 import { spawn, spawnSync } from 'child_process'
 
 export class Killer {
-    private platform: string
+    private readonly platform: string
     private platforms = {
         win32: { command: 'Taskkill', args: ['/F', '/PID'] },
         linux: { command: 'kill', args: ['-9'] },
@@ -35,10 +35,8 @@ export class Killer {
     }
 
     private linux(port: number): Promise<string[] | {}> {
-        let resolver,
-            promise = new Promise(resolve => {
-                resolver = resolve
-            })
+        let resolver
+        const promise = new Promise(resolve => (resolver = resolve))
 
         const lsof = spawn('lsof', ['-s', 'TCP:LISTEN', '-i', ':' + port])
         const awk = spawn('awk', ['$8 == "TCP" { print $2 }'], {
@@ -49,9 +47,12 @@ export class Killer {
 
         awk.stdout.on('data', data => (result += data))
         awk.on('close', () => this.parse(result, resolver))
-        awk.stdin.end()
 
-        return promise as any
+        if (awk.stdin) {
+            awk.stdin.end()
+        }
+
+        return promise
     }
 
     private win32(port: number): Promise<string | {}> {
