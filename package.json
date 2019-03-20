@@ -1,6 +1,6 @@
 {
   "name": "cross-port-killer",
-  "version": "0.0.0-development",
+  "version": "1.1.1",
   "description": "Kill the process running on a given TCP port on Windows, Linux and Mac",
   "keywords": [
     "port",
@@ -13,6 +13,7 @@
     "mac"
   ],
   "main": "source/index.js",
+  "types": "source/index.d.ts",
   "bin": {
     "kill-port": "source/cli.js"
   },
@@ -36,6 +37,7 @@
   },
   "files": [
     "source/*.js",
+    "source/*.d.ts",
     "test"
   ],
   "author": {
@@ -50,7 +52,7 @@
   "homepage": "https://github.com/milewski/cross-port-killer",
   "devDependencies": {
     "@types/mocha": "^5.2.6",
-    "@types/node": "^11.11.3",
+    "@types/node": "^11.11.4",
     "commitizen": "^3.0.7",
     "cz-conventional-changelog": "^2.1.0",
     "expect.js": "^0.3.1",
@@ -60,7 +62,7 @@
     "prettier": "^1.16.4",
     "ps-list": "^6.2.0",
     "semantic-release": "^15.13.3",
-    "typescript": "^3.3.3333"
+    "typescript": "^3.3.4000"
   },
   "config": {
     "commitizen": {

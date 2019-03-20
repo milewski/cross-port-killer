@@ -4,6 +4,7 @@
     "target": "es5",
     "sourceMap": false,
     "newLine": "LF",
+    "declaration": true,
     "types": [
       "node",
       "mocha"
