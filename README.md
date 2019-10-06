@@ -33,6 +33,14 @@ killer.killByPids([12345, 54321]).then(() => console.log('done'))
 ```
 This lib also comes with a `CLI`.
 
+To kill any process occupying the port 9090 you can run:
+
+```bash
+$ npx cross-port-killer 9090
+```
+
+or
+
 ```bash
 $ npm install cross-port-killer -g
 ```
