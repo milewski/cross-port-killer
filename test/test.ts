@@ -1,13 +1,13 @@
 import { spawn } from 'child_process'
 import * as expect from 'expect.js'
-import psList from 'ps-list'
+import * as psList from 'ps-list'
 import { Killer } from '../source/port-killer'
 
 describe('Assassin', () => {
     it('should terminate process running on a given port', done => {
         const server = spawn('node', [require.resolve('http-server/bin/http-server'), '-p', '7070'], {
             stdio: 'ignore',
-            detached: true
+            detached: true,
         })
 
         server.unref()

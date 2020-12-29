@@ -5,7 +5,7 @@ export class Killer {
     private platforms = {
         win32: { command: 'Taskkill', args: ['/F', '/PID'] },
         linux: { command: 'kill', args: ['-9'] },
-        darwin: { command: 'kill', args: ['-9'] }
+        darwin: { command: 'kill', args: ['-9'] },
     }
 
     constructor(platform: string) {
@@ -40,7 +40,7 @@ export class Killer {
 
         const lsof = spawn('lsof', ['-s', 'TCP:LISTEN', '-i', ':' + port])
         const awk = spawn('awk', ['$8 == "TCP" { print $2 }'], {
-            stdio: [lsof.stdout]
+            stdio: [lsof.stdout],
         })
 
         let result = ''
@@ -62,10 +62,10 @@ export class Killer {
             })
 
         const findstr = spawn('findstr', [`:${port}.*LISTENING`], {
-            stdio: ['pipe']
+            stdio: ['pipe'],
         })
         const netstat = spawn('netstat', ['-ano'], {
-            stdio: ['ignore', findstr.stdin]
+            stdio: ['ignore', findstr.stdin],
         })
 
         let result = ''

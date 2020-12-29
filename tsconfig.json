@@ -1,19 +1,19 @@
 {
-  "compilerOptions": {
-    "module": "commonjs",
-    "target": "es5",
-    "sourceMap": false,
-    "newLine": "LF",
-    "declaration": true,
-    "types": [
-      "node",
-      "mocha"
-    ],
-    "lib": [
-      "es2015"
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es5",
+        "sourceMap": false,
+        "newLine": "LF",
+        "declaration": true,
+        "types": [
+            "node",
+            "mocha"
+        ],
+        "lib": [
+            "es2015"
+        ]
+    },
+    "exclude": [
+        "node_modules"
     ]
-  },
-  "exclude": [
-    "node_modules"
-  ]
 }
