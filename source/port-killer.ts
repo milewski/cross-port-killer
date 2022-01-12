@@ -61,7 +61,7 @@ export class Killer {
                 resolver = resolve
             })
 
-        const findstr = spawn('findstr', [`:${port}.*LISTENING`], {
+        const findstr = spawn('findstr', [`:${port}.*`], {
             stdio: ['pipe'],
         })
         const netstat = spawn('netstat', ['-ano'], {
