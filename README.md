@@ -2,7 +2,6 @@
 
 [![npm version](https://badge.fury.io/js/cross-port-killer.svg)](https://badge.fury.io/js/cross-port-killer)
 [![npm downloads](https://img.shields.io/npm/dm/cross-port-killer.svg)](https://www.npmjs.com/package/cross-port-killer)
-[![dependencies](https://david-dm.org/milewski/cross-port-killer.svg)](https://www.npmjs.com/package/cross-port-killer)
 
 Kill the process running on a given TCP port on **Windows**, **Linux** and **Mac**
 
