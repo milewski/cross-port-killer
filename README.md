@@ -3,7 +3,7 @@
 [![npm version](https://badge.fury.io/js/cross-port-killer.svg)](https://badge.fury.io/js/cross-port-killer)
 [![npm downloads](https://img.shields.io/npm/dm/cross-port-killer.svg)](https://www.npmjs.com/package/cross-port-killer)
 
-Kill the process running on a given TCP port on **Windows**, **Linux** and **Mac**
+Kill any process running on a given TCP port on **Windows**, **Linux** or **Mac**
 
 ## Install
 
@@ -47,10 +47,10 @@ $ kill-port 9090
 On **Linux**/**Mac** this library depends on `lsof` in case you don't have it installed (perhaps you are using docker?) run:
 
 ```bash
-$ apt-get install lsof
+$ apt install lsof
 ```
 
-On **Mac**, It comes with the OS by default so nothing to worries.
+On **Mac**, It comes with the OS by default so nothing to worry.
 
 ## License 
 
